@@ -1,0 +1,16 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: Build
+metadata:
+  name: test-build-with-more-steps
+  labels:
+    expect: succeeded
+spec:
+  steps:
+  - name: step1
+    image: ubuntu
+    command: ["/bin/bash"]
+    args: ["-c", "sleep 15"]
+  - name: step2
+    image: ubuntu
+    command: ["/bin/bash"]
+    args: ["-c", "sleep 10"]
