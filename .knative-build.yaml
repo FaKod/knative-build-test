@@ -1,7 +1,7 @@
 apiVersion: build.knative.dev/v1alpha1
 kind: Build
 metadata:
-  name: test-build-with-more-steps
+  name: test-build
   labels:
     expect: succeeded
 spec:
